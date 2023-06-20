@@ -32,7 +32,6 @@ int main(int ac, char *av[])
 	fp = fopen(av[1], "r");
 	if (!fp)
 	{
-
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
 		exit(1);
 	}
@@ -41,11 +40,14 @@ int main(int ac, char *av[])
 	{
 		buffer = NULL;
 		s_read = getline(&buffer, &len, fp);
+		// so hna 9rina men lfile desc w 8tina flbuffer
 		count++;
+		//had lcount dertu bach n3ref lcmnd luwla men lcmnd tanya w hiya ghada
 		data.buff = buffer;
+		// hzit lbuffer 7tiitu hna bach nsauvegardih in case 7tajitu men be3d
 		if (s_read > 0)
 		{
-			execution(fp, buffer, &stack, count);
+			handl_execution(fp, buffer, &stack, count);
 		}
 		free(buffer);
 		//print_stack(&stack);

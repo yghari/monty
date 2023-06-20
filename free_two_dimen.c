@@ -2,6 +2,7 @@
 
 void free_td(stack_t *h)
 {
+	// hada kayfreeyi two dimantional array
 	stack_t *temp;
 
 	temp = h;

@@ -1,9 +1,10 @@
 #include "monty.h"
 
-void pall_func(stack_t **h, unsigned int coun)
+void pall_function(stack_t **h, unsigned int c)
 {
+	// had pall function katprinti liya chnu kayen fstack ga3 lvalues li kaynin
 	stack_t *temp;
-	(void)coun;
+	(void)c;
 
 	temp = *h;
 	if (temp == NULL)

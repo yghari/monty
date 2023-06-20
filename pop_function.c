@@ -1,7 +1,9 @@
 #include "monty.h"
 
-void pop_func(stack_t **h, unsigned int c)
+void pop_function(stack_t **h, unsigned int c)
 {
+  // pop kattiyer lprevious value 
+  // katkhdem b7al lpint ghi hiya 3owet matprinti katremovii
 	stack_t *temp;
 
 	if (*h == NULL)

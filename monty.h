@@ -81,12 +81,14 @@ typedef struct data_s
 
 extern data_t data;
 
-int execution(FILE *file_d, char *str, stack_t **stack, unsigned int i);
+int handl_execution(FILE *file_d, char *str, stack_t **stack, unsigned int i);
 void add_node(stack_t **h, unsigned int n);
-void push_func(stack_t **h, unsigned int cnt);
-void pall_func(stack_t **h, unsigned int coun);
-void pint_func(stack_t **h, unsigned int coun);
-void pop_func(stack_t **h, unsigned int c);
+void push_function(stack_t **h, unsigned int c);
+void pall_function(stack_t **h, unsigned int c);
+void pint_function(stack_t **h, unsigned int c);
+void pop_function(stack_t **h, unsigned int c);
+void swap_function(stack_t **h, unsigned int c);
+void nop_function(stack_t **h, unsigned int c);
 void print_stack(stack_t **stack);
 void free_td(stack_t *h);
 
