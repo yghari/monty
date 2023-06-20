@@ -12,24 +12,24 @@ void push_func(stack_t **h, unsigned int cnt)
 		{
 			if (data.org_cmnds[j] > 57 || data.org_cmnds[j] < 48)
 				flg = 1;
-    }
+		}
 		if (flg == 1)
 		{
-      fprintf(stderr, "L%d: usage: push integer\n", cnt);
+			fprintf(stderr, "L%d: usage: push integer\n", cnt);
 			fclose(data.file_descriptor);
-      free_td(*h);
+			free_td(*h);
 			free(data.buff);
-			exit(EXIT_FAILURE);
-      }
-    }
+			exit(1);
+			}
+		}
 	else
 	{ 
-    fprintf(stderr, "L%d: usage: push integer\n", cnt);
+		fprintf(stderr, "L%d: usage: push integer\n", cnt);
 		fclose(data.file_descriptor);
-    free_td(*h);
+		free_td(*h);
 		free(data.buff);
-		exit(EXIT_FAILURE);
-  }
+		exit(1);
+	}
 	i = atoi(data.org_cmnds);
 	add_node(h, i);
 }
