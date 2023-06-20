@@ -29,6 +29,7 @@ int execution(FILE *file_d, char *str, stack_t **stack, unsigned int count_i)
     free_td(*stack);
 		fclose(file_d);
 		free(str);
+    exit(EXIT_FAILURE);
   }
   return (1);
 }
