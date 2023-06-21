@@ -1,8 +1,12 @@
 #include "monty.h"
 
-//a.out -- av[1] 00.m
 data_t data = {NULL, NULL, NULL};
-
+/**
+ * print_stack - Prints the values of a stack.
+ * @stack: Pointer to the head of the stack.
+ *
+ * Return: void
+ */
 void print_stack(stack_t **stack)
 {
 	stack_t *current_node = *stack;
@@ -13,12 +17,18 @@ void print_stack(stack_t **stack)
 		current_node = current_node->next;
 	}
 }
-
+/**
+ * main - Entry point of the Monty interpreter.
+ * @ac: Number of command line arguments.
+ * @av: Array of command line arguments.
+ *
+ * Return: 0 on success, 1 on failure.
+ */
 int main(int ac, char *av[])
 {
 	FILE *fp;
 	size_t len = 0;
-	unsigned int count = 0 ;
+	unsigned int count = 0;
 	stack_t *stack = NULL;
 	ssize_t s_read = 1;
 	char *buffer;
@@ -40,19 +50,13 @@ int main(int ac, char *av[])
 	{
 		buffer = NULL;
 		s_read = getline(&buffer, &len, fp);
-		// so hna 9rina men lfile desc w 8tina flbuffer
 		count++;
-		//had lcount dertu bach n3ref lcmnd luwla men lcmnd tanya w hiya ghada
 		data.buff = buffer;
-		// hzit lbuffer 7tiitu hna bach nsauvegardih in case 7tajitu men be3d
 		if (s_read > 0)
 		{
 			handl_execution(fp, buffer, &stack, count);
 		}
 		free(buffer);
-		//print_stack(&stack);
-		// printf("|len|=> : %ld\n", len);
-		// printf("|buffer|=> : %s\n", buffer);
 	}
 	fclose(fp);
 	free_td(stack);

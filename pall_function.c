@@ -1,8 +1,13 @@
 #include "monty.h"
-
+/**
+ * pall_function - Prints all values on the stack.
+ * @h: Pointer to the head of the stack.
+ * @c: Current line number of the bytecode file.
+ *
+ * Return: void
+ */
 void pall_function(stack_t **h, unsigned int c)
 {
-	// had pall function katprinti liya chnu kayen fstack ga3 lvalues li kaynin
 	stack_t *temp;
 	(void)c;
 

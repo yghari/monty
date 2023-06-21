@@ -1,5 +1,11 @@
 #include "monty.h"
-
+/**
+ * add_node - Creates a new node and adds it to the beginning of a stack.
+ * @h: Pointer to the pointer of the head of the stack.
+ * @n: Unsigned integer value to be stored in the new node.
+ *
+ * Return: void
+ */
 void add_node(stack_t **h, unsigned int n)
 {
 

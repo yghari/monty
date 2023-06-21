@@ -1,5 +1,11 @@
 #include "monty.h"
-
+/**
+ * swap_function - Swaps the top two elements of the stack.
+ * @h: Pointer to the head of the stack.
+ * @c: Current line number of the bytecode file.
+ *
+ * Return: void
+ */
 void swap_function(stack_t **h, unsigned int c)
 {
 	stack_t *tmp;
