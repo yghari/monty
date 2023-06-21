@@ -12,11 +12,15 @@ void push_function(stack_t **h, unsigned int c)
 
 	if (data.org_cmnds)
 	{
+		if (data.org_cmnds[0] == '-')
+		{
+			j++;
+		}
 		while (data.org_cmnds[j] != '\0')
 		{
-			if (data.org_cmnds[j] > 57 || data.org_cmnds[j] < 48)
+			if (data.org_cmnds[j] < 48 || data.org_cmnds[j] > 57)
 				flg = 1;
-			 j++;
+			j++;
 		}
 		if (flg == 1)
 		{
@@ -25,8 +29,8 @@ void push_function(stack_t **h, unsigned int c)
 			free_td(*h);
 			free(data.buff);
 			exit(1);
-			}
 		}
+	}
 	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", c);
