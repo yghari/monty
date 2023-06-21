@@ -3,7 +3,7 @@
 void push_function(stack_t **h, unsigned int c)
 {
 	//hadi t9edri t9uli hiya li kat3mrli stack 
-	// katb9a tpush value blvalue
+	// katb9a tpushi value bvalue fstack
 	int i, j = 0, flg = 0;
 
 	if (data.org_cmnds)
