@@ -18,10 +18,6 @@ int handl_execution(FILE *file_d, char *str, stack_t **stack
 		{"pop", pop_function},
 		{"swap", swap_function},
 		{"nop", nop_function},
-		{"add", add_function},
-		{"sub", sub_function},
-		{"div", div_function},
-		{"mul", mul_function},
 		{NULL, NULL}
 	};
 
