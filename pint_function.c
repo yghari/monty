@@ -11,7 +11,7 @@ void pint_function(stack_t **h, unsigned int c)
 	if (*h == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", c);
-		fclose(data.file_descriptor);
+		/*fclose(data.file_descriptor);*/
 		free(data.buff);
 		free_td(*h);
 		exit(1);
