@@ -68,5 +68,5 @@ void free_td(stack_t *h);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void add_function(stack_t **stack, unsigned int line_number);
 void sub_function(stack_t **stack, unsigned int line_number);
-
+void div_function(stack_t **stack, unsigned int line_number);
 #endif
