@@ -22,6 +22,7 @@ int handl_execution(FILE *file_d, char *str, stack_t **stack
 		{"sub", sub_function},
 		{"div", div_function},
 		{"mul", mul_function},
+		{"mod", mod_function},
 		{NULL, NULL}
 	};
 
