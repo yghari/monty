@@ -13,7 +13,7 @@ void pop_function(stack_t **h, unsigned int c)
 	if (*h == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", c);
-		fclose(data.file_descriptor);
+		/*fclose(data.file_descriptor);*/
 		free(data.buff);
 		free_td(*h);
 		exit(1);
